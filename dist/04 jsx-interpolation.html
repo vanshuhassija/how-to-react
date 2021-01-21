@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro To React</title>
+    <script crossorigin="" src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin="" src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/babel">
+    const node = document.getElementById("root");
+    // Interpolation Example
+
+    const children = "Hello World";
+    const myClassName = "container";
+    // const element = <div className={myClassName}>{children}</div>;
+
+    //Self closing tags
+    // const element = <div className={myClassName} children={children} />;
+
+    //Spreading Props
+    const children = "Hello World";
+    const className = "container";
+    const props = {
+      children,
+      className,
+    };
+    const element = <div id="app-root" {...props} className="not-container" />;
+
+    // //Overriding Props
+    // const children = "Hello World";
+    // const className = "container";
+    // const props = { children, className };
+    // const element = <div id="app-root" {...props} className="not-container" />;
+
+    ReactDOM.render(element, node);
+  </script>
+</html>
