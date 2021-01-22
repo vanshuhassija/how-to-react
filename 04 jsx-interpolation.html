@@ -26,7 +26,7 @@
     // const element = <div className={myClassName}>{children}</div>;
 
     //Self closing tags
-    // const element = <div className={myClassName} children={children} />;
+    const element = <div className={myClassName} children={children} />;
 
     //Spreading Props
     const children = "Hello World";
@@ -36,7 +36,6 @@
       className,
     };
     const element = <div id="app-root" {...props} className="not-container" />;
-
     // //Overriding Props
     // const children = "Hello World";
     // const className = "container";

@@ -1,0 +1,50 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+    // function CharacterCount({ text }) {
+    //   return (
+    //     <div>
+    //       {`The text "${text}" has `}
+    //       {text.length ? <strong>{text.length}</strong> : "No"}
+    //       {" characters"}
+    //     </div>
+    //   );
+    // }
+
+    // const element = (
+    //   <>
+    //     <CharacterCount text="Hello World" />
+    //     <CharacterCount text="" />
+    //   </>
+    // );
+    //Hello
+    //
+    //The text has 40 charcters
+
+    //If length > 0 then it should print number of charcters
+    //Else print No characters
+
+    const CharacterCount = (props) => {
+      return (
+        <div>
+          The text has{" "}
+          {props.text.length > 0 ? <strong>{props.text.length}</strong> : "No"}
+          {"  "}
+          characters
+        </div>
+      );
+    };
+
+    const element = (
+      <>
+        <CharacterCount text="Hello" />
+        <CharacterCount text="" />
+      </>
+    );
+
+    ReactDOM.render(element, document.getElementById("root"));
+  </script>
+</body>

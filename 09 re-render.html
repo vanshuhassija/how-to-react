@@ -1,0 +1,53 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+    // const time = new Date().toLocaleDateString();
+    // //If you wanna update time then you have to refresh again and again
+    // const element = <div>{time}</div>;
+    // ReactDOM.render(element, document.getElementById("root"));
+
+    // To update it every Second
+    // function tick() {
+    //   const time = new Date().toLocaleTimeString();
+
+    //   const element = <div>{time}</div>;
+    //   ReactDOM.render(element, document.getElementById("root"));
+    // }
+    // setInterval(tick, 1000);
+
+    // In vanilla Js
+    // const node = document.getElementById("root");
+    // function tick() {
+    //   const time = new Date().toLocaleTimeString();
+    //   node.innerHTML = `<div>${time}</div>`;
+    // }
+    // setInterval(tick, 1000);
+
+    //Example with input
+    // const node = document.getElementById("root");
+    // function tick() {
+    //   const time = new Date().toLocaleTimeString();
+    //   node.innerHTML = `<input value=${time}><input value=${time}>`;
+    // }
+    // setInterval(tick, 1000);
+    //Focus is Lost
+
+    //Example input with React
+    // To update it every Second
+    function tick() {
+      const time = new Date().toLocaleTimeString();
+
+      const element = (
+        <>
+          <input value={time} />
+          <input value={time} />
+        </>
+      );
+      ReactDOM.render(element, document.getElementById("root"));
+    }
+    setInterval(tick, 1000);
+  </script>
+</body>
